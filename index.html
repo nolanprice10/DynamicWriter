@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DynamicWriter</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">YOUR VOICE, YOUR PROCESS</p>
+      <h1>DynamicWriter</h1>
+      <p>Turn your past writing into a starting point for your next paper.</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="notice">Your files are extracted locally. When you use an AI action, your samples, instructions, and relevant draft are sent to OpenAI. Nothing is saved by this app; download your work before refreshing or closing the page.</p>
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <section>
+      <div class="section-heading"><span>01</span><div><h2>Discover your voice</h2><p>Upload up to 10 papers you wrote. Review and edit the extracted text before analysis.</p></div></div>
+      <label for="samples">Writing samples (.txt, .md, .docx, or text-based .pdf)</label>
+      <input id="samples" type="file" accept=".txt,.md,.docx,.pdf" multiple>
+      <div id="sample-list"></div>
+      <button id="analyze" type="button">Analyze my writing</button>
+      <label for="profile">Writing profile <span>— review and adjust the analysis</span></label>
+      <textarea id="profile" rows="10" placeholder="Your writing profile will appear here."></textarea>
+    </section>
+
+    <section>
+      <div class="section-heading"><span>02</span><div><h2>Set the direction</h2><p>Describe the assignment and share the criteria and advice you want followed.</p></div></div>
+      <label for="assignment">Assignment or paper prompt</label>
+      <textarea id="assignment" rows="4" placeholder="What are you writing about? Include the purpose, audience, and desired length."></textarea>
+      <label for="rubric-file">Upload a rubric <span>— optional</span></label>
+      <input id="rubric-file" type="file" accept=".txt,.md,.docx,.pdf">
+      <label for="rubric">Rubric or criteria <span>— review and edit the extracted text</span></label>
+      <textarea id="rubric" rows="5" placeholder="Paste a rubric or upload one above."></textarea>
+      <label for="guidance">Comments, tips, and other guidance <span>— optional</span></label>
+      <textarea id="guidance" rows="4" placeholder="Add your ideas, preferences, sources, or other instructions."></textarea>
+      <button id="draft-button" type="button">Write a draft</button>
+    </section>
+
+    <section>
+      <div class="section-heading"><span>03</span><div><h2>Make it yours</h2><p>Edit the draft directly or ask for a thoughtful revision.</p></div></div>
+      <label for="draft">Your paper</label>
+      <textarea id="draft" rows="18" placeholder="Your draft will appear here. You can edit it directly."></textarea>
+      <label for="revision">Revision instructions</label>
+      <textarea id="revision" rows="4" placeholder="What would you like to change?"></textarea>
+      <div class="actions">
+        <button id="revise" type="button">Revise my paper</button>
+        <button id="download" type="button" class="secondary">Download .txt</button>
+      </div>
+      <p class="fine-print">AI can make mistakes. Review the paper, verify claims and sources, and follow your institution's rules for AI use.</p>
+    </section>
+  </main>
+</body>
+</html>
